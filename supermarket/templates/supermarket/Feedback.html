@@ -1,0 +1,34 @@
+{% extends 'supermarket/base.html' %}
+{% load crispy_forms_tags %}
+	{% block content %}
+<title>Rada - Ecommerce | Feedback</title>
+<a href="{% url 'supermarket/shop' %}"><img src="/static/supermarket/logo.png"></a>
+<head>
+	<body>
+<div class="text-center">
+      <h3>
+        Feedback
+      </h3><br>
+      <form>
+        <input class="contactNameBox" type="text" name="firstname" placeholder="First Name"> <input class="contactNameBox" type="text" name="lastname" placeholder="Last Name"><br><br>
+        <input type="number" name="phonenumber" class="phoneNumberBox" placeholder="Phone Number"><br><br>
+        <textarea class="messageBox" rows="10" cols="40" placeholder="Message"></textarea><br>
+        <input class="btn btn-warning" type="submit" value="submit">
+      </form>
+    </div>
+    <div class="row text-center" >
+      <div class="col-md-3">
+        <a href="#"><img src="https://image.flaticon.com/icons/svg/60/60580.svg" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://imageog.flaticon.com/icons/png/512/69/69407.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-512.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://icons-for-free.com/iconfiles/png/512/book+circle+contact+contacts+email+gmail+icon-1320073243450677731.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+    </div>
+  </body>
+{% endblock content %}

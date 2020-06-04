@@ -1,0 +1,50 @@
+{% extends 'supermarket/base.html' %}
+{%load crispy_forms_tags %}
+	{% block content %}
+<title>rada Ecommerce | Shop</title>
+      <a href="{% url 'supermarket/shop' %}"><img src="/static/supermarket/logo.png"></a>
+<div class="media-body">
+    <article class="media content-section">
+      <div class="article-metadata">
+            <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+            <small class="text-muted">{{ object.date_posted|date:'F d , Y'}}</small>
+          {% if object.author == user %}
+          <div>
+              <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+          </div>
+          {% endif %}
+      </div>
+            <h2 class="article-title" >{{ object.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+    <img src="{{ object.image1.url }}" alt="">
+            <i class="">powered by Ayub </i>
+        </article>
+</div>
+					  <!--like and dislike button -->
+		<button class="social-like" >
+			 <span class="like"><i class="glyphicon glyphicon-thumbs-up"></i></span>
+			 <span class="count" >responds  100k</span>
+		</button>
+			&nbsp; <!-- no breaking space -->
+		 <button class="social-dislike" >
+			 <span class="dislike" >dislikes  24</span>
+			 <span class="like"><i class="glyphicon glyphicon-thumbs-down"></i></span>
+		</button>
+
+<div class="row text-center" >
+      <div class="col-md-3">
+        <a href="#"><img src="https://image.flaticon.com/icons/svg/60/60580.svg" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div  class="col-md-3">
+        <a href="#"><img src="https://imageog.flaticon.com/icons/png/512/69/69407.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-512.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://icons-for-free.com/iconfiles/png/512/book+circle+contact+contacts+email+gmail+icon-1320073243450677731.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+    </div>
+
+{% endblock content %}

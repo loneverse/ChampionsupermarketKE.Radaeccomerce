@@ -1,0 +1,160 @@
+body {
+  background: #fafafa;
+  color: #7232b8;
+  margin-top: 5rem;
+  background-image: url(hj.jpg), url(Logo.jpg);
+  background-position: center, left top;
+  background-repeat: no-repeat , no-repeat;
+  padding:10px;
+	}
+h1, h2,h4, h5, h6 {
+  color: #7232b8;
+	}
+	ul {
+	  margin: 0;
+	}
+	.bg-steel {
+	  background-color: #40243e;
+	}
+
+	.site-header .navbar-nav .nav-link {
+	  color: #cbd5db;
+	}
+	.site-header .navbar-nav .nav-link.active {
+	  font-weight: 500;
+	}
+    .newsletter-area {
+  position: relative;
+  z-index: 1;
+  background-color: #3c3c3c;
+   }
+   .newsletter-area .newsletter-text {
+    position: relative;
+    z-index: 1;
+   }
+    .newsletter-area .newsletter-text h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #fff;
+   }
+      .newsletter-area .newsletter-text h2 {
+          font-size: 30px;
+    }
+     .newsletter-area .newsletter-text h2 span {
+        color: #fbb710;
+        }
+    .newsletter-area .newsletter-text p {
+      color: #b3b1b1;
+      margin-bottom: 0;
+      }
+  .newsletter-area .newsletter-form form {
+    position: relative;
+    z-index: 1;
+    }
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+h1 {
+font-family: Verdana;
+color: orange;
+}
+h3{
+font-family:Verdana;
+color:yellow;
+}
+.contactIcon {
+  height: 50px;
+}
+ legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    }
+    .site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+.content-section {
+	  background: #ffffff;
+	  padding: 10px 20px;
+	  border: 1px solid #dddddd;
+	  border-radius: 3px;
+	  margin-bottom: 20px;
+	}
+.article-content {
+	  white-space: pre-line;
+	}
+.article-metadata {
+	  padding-bottom: 1px;
+	  margin-bottom: 4px;
+	  border-bottom: 1px solid #e3e3e3
+	}
+.article-metadata a:hover {
+	  color: #333;
+	  text-decoration: none;
+	}
+.social-like{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 48%;
+    background-color: #03A9F4;
+    color: #fff;
+}
+
+.social-like:hover, .social-dislike:hover {
+  text-decoration:none;
+  color:white;
+}
+
+.social-like:active, .social-dislike:active {
+  background-color: #c7107b;
+  background-color: #03A9F4;
+}
+
+.social-dislike{
+    background-color: #c7107b;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 48%;
+    color: #fff;
+            }
+.article-svg {
+	  width: 25px;
+	  height: 25px;
+	  vertical-align: middle;
+	}
+.article-metadata a:hover {
+	  color: #333;
+	  text-decoration: none;
+	}
+.article-title {
+	  color: #444444;
+	}
+	.contactIcon {
+         height: 50px;
+                     }
+    .account-img {
+	  height: 125px;
+	  width: 125px;
+	  margin-right: 20px;
+	  margin-bottom: 16px;
+	}
+	.article-img {
+	  height: 65px;
+	  width: 65px;
+	  margin-right: 16px;
+	}
+   i{
+    color:#444444;
+}

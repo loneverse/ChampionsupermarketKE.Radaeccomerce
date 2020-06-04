@@ -1,0 +1,69 @@
+{% extends 'supermarket/base.html' %}
+{%load crispy_forms_tags %}
+	{% block content %}
+<title>rada Ecommerce | Shop</title>
+                <a href="{% url 'supermarket/shop' %}"><img src="/static/supermarket/logo.png"></a>
+<img class="rounded-circle article-img" src="{{ user.profile.image.url }}" alt="">
+ {% for post in posts %}
+ <div class="article-metadata">
+<div class="media-body">
+            <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+            <small class="text-muted">{{ post.date_posted|date:'F d , Y'}}</small>
+      </div>
+    <article class="media content-section">
+            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+    <img src="{{ post.image1.url }}" alt="">
+            <i class="">powered by Ayub </i>
+            </article>
+</div>
+
+					  <!--like and dislike button -->
+		<button class="social-like" >
+			 <span class="like"><i class="glyphicon glyphicon-thumbs-up"></i></span>
+			 <span class="count" >responds  100k</span>
+		</button>
+			&nbsp; <!-- no breaking space -->
+		 <button class="social-dislike" >
+			 <span class="dislike" >dislikes  24</span>
+			 <span class="like"><i class="glyphicon glyphicon-thumbs-down"></i></span>
+		</button>
+
+{% endfor %}
+{% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+        <a  class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a  class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+            <a  class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'  %}
+            <a  class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+        {% if page_obj.has_next %}
+        <a  class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a  class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+{% endif %}
+<div class="row text-center" >
+      <div class="col-md-3">
+        <a href="#"><img src="https://image.flaticon.com/icons/svg/60/60580.svg" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://imageog.flaticon.com/icons/png/512/69/69407.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.instagram.com/truthindustries1/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-512.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#"><img src="https://icons-for-free.com/iconfiles/png/512/book+circle+contact+contacts+email+gmail+icon-1320073243450677731.png" class="contactIcon btn btn-outline-light "></a>
+      </div>
+    </div>
+
+{% endblock content %}
