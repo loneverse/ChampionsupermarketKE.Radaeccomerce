@@ -5,14 +5,12 @@
 <a href="{% url 'supermarket/shop' %}"><img src="/static/supermarket/logo.png"></a>
 <head>
 	<body>
-<form method="POST">
-            {% csrf_token %}
-    </form>
 <div class="text-center">
       <h3>
         Feedback
       </h3><br>
-      <form>
+      <form method="POST">
+          {% csrf_token %}
         <input class="contactNameBox" type="text" name="firstname" placeholder="First Name"> <input class="contactNameBox" type="text" name="lastname" placeholder="Last Name"><br><br>
         <input type="number" name="phonenumber" class="phoneNumberBox" placeholder="Phone Number"><br><br>
         <textarea class="messageBox" rows="10" cols="40" placeholder="Message"></textarea><br>
