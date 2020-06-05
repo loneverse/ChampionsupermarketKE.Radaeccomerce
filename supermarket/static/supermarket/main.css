@@ -2,9 +2,6 @@ body {
   background: #fafafa;
   color: #7232b8;
   margin-top: 5rem;
-  background-image: url(ayub.jpg), url(Logo.jpg);
-  background-position: center, left top;
-  background-repeat: no-repeat , no-repeat;
   padding:10px;
 	}
 h1, h2,h4, h5, h6 {

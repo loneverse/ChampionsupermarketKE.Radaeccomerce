@@ -14,7 +14,7 @@ def shop(request):
     return render(request, 'supermarket/shop.html', context)
 
 
-class PostListView(LoginRequiredMixin, ListView):
+class PostListView(ListView):
     model = Post
     template_name = 'supermarket/shop.html' #<app>/<model>_<viewtype>.html
     context_object_name = 'posts'
@@ -22,7 +22,7 @@ class PostListView(LoginRequiredMixin, ListView):
     paginate_by = 2
 
 
-class UserPostListView(LoginRequiredMixin, ListView):
+class UserPostListView( ListView):
     model = Post
     template_name = 'supermarket/user_posts.html' #<app>/<model>_<viewtype>.html
     context_object_name = 'posts'
