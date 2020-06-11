@@ -1,5 +1,11 @@
 body {
   background: #fafafa;
+  background-image: url("https://drive.google.com/uc?export=view&id=1BeGY4MpaAGXX-bjCj2Z_7379T5uX20DX");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
   color: #7232b8;
   margin-top: 5rem;
   padding:10px;
