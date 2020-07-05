@@ -24,7 +24,7 @@ SECRET_KEY = '731f110fd0d0afa21e205bc3c1965d1a94840ce8870a4a4d'
 # if secret key does not work try this generated one( 731f110fd0d0afa21e205bc3c1965d1a94840ce8870a4a4d) default (k*6gg@1!bfyvd!w*ll!@yumlat=6%9n0s0c)p^&dquam8nq3+r)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['radamart1.herokuapp.com']
 

@@ -5,7 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView ,D
 from django.contrib.auth.decorators import login_required
 from .models import Post
 
-@login_required()
+
 def shop(request):
 
     context = {
@@ -75,7 +75,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 def products(request):
     return render(request, 'supermarket/products.html', {'title': 'products'})
 
-@login_required()
+
 def feedback(request):
     return render(request, 'supermarket/Feedback.html', {'title': 'feedback'})
 
