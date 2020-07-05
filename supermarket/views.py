@@ -71,7 +71,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
-@login_required()
 def products(request):
     return render(request, 'supermarket/products.html', {'title': 'products'})
 
